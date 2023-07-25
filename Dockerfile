@@ -12,7 +12,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 8000
-# We need to specify the port that the container will listen to.
+
 
 CMD [ "gunicorn", "containers_python_django.wsgi:application", "--bind", "0.0.0.0:8000" ]
